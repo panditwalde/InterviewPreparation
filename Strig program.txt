@@ -1,0 +1,117 @@
+
+
+1.duplicate character in string
+-----------------------------------------
+  static void stringcheck(String n)
+	{
+HashMap<Character,Integer> hm=new HashMap<Character,Integer>();
+			
+		char[] s1=n.toCharArray();
+		for(char c:s1)
+		{
+			if(hm.containsKey(c))
+			{
+				
+				hm.put(c, hm.get(c)+1);
+                                
+			}
+			else
+			{
+				hm.put(c, 1);
+			}
+	}
+		
+		System.out.println(hm);
+	}
+
+	public static void main(String[] args) 
+	{
+		stringcheck("panditttt");
+	}			
+	
+          Or
+           int count=0;
+		System.out.println("Enter the String");
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		for(char i='a';i<='z';i++)
+		{
+		for(int j=0;j<s.length()-1;j++)
+		{
+		if(s.charAt(j)==i)
+		{
+		   count++;
+		}
+		}
+		if(count!=0)
+		{
+		System.out.println(i+"="+count);
+		count=0;
+		}
+		}
+
+2. replace character to character
+----------------------------------
+
+
+ #include<stdio.h>
+    #include<conio.h>
+    void main()
+    {
+       char s[100];
+       clrscr();
+       printf("Enter the string \n");
+       scanf("%s",s);
+       printf("String :- %s",s);
+       for(int i=0;s[i]!='\0';i++)
+	{
+	   if(s[i]=='p')
+	   {
+	      s[i]='z';
+	   }
+	    if(s[i]=='a')
+	   {
+	      s[i]='x';
+	   }
+	}
+	printf("\nString:- %s",s);
+
+      getch();
+    }
+
+
+//count repeating char in String
+	char s[100]="AAAaabbBBCccc";
+ 	int cA=0  ,ca=0,cB=0,cb=0,cC=0,cc=0;
+    for(int i=0;s[i]!='\0';i++)
+ 	{
+ 		
+ 		
+ 		 if(s[i]=='A')
+	   {
+	      cA++;
+	   }
+	   else if(s[i]=='a')
+	   {
+	      ca++;
+	   }
+	   else if(s[i]=='B')
+	   {
+	      cB++;
+	   }
+	   else if(s[i]=='b')
+	   {
+	      cb++;
+	   }
+	   	
+ 		 if(s[i]=='C')
+	   {
+	      cC++;
+	   }
+	   else if(s[i]=='c')
+	   {
+	      cc++;
+	   }
+	
+	 }
+	 printf("\nString:- %dA%da%dB%db%dC%dc",cA,ca,cB,cb,cC,cc);
