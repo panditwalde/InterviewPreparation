@@ -1,0 +1,203 @@
+//large number   
+
+public class array 
+{
+	public static void main(String x[])
+	{
+		 java.util.Scanner in=new java.util.Scanner(System.in);
+		int a[]=new int[10];
+		int n,i,j,rank;
+		System.out.println("Enter the array size");
+		n=in.nextInt();
+		System.out.println("Enter the array element");
+		for(i=0;i<n;i++)
+		{
+			a[i]=in.nextInt();
+		}
+		System.out.println("Display the array element");
+		for(i=0;i<n;i++)
+		{
+			System.out.printf("%d\t",a[i]);
+			
+
+	}
+
+    //large
+		for(i=0;i<n;i++)
+		{
+			rank=0;
+			for(j=0;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					rank++;
+				}
+			}
+			if(rank==n-3)
+			{
+				System.out.println("\nThird Largest Element in an Array "+a[i]);
+				break;
+			}
+		}
+
+//delete position
+
+    System.out.println("Enter which position to want delete!!");
+     pos=in.nextInt();
+     if(pos>=n+1)
+     {
+    	 System.out.println("Delection not possible!!!!");
+     }
+     else
+     {
+    	 for(i=pos-1;i<n-1;i++)
+    	 {
+    		 a[i]=a[i+1];
+    	 }
+     }
+     System.out.println("After delection of array");
+      for(i=0;i<n-1;i++)
+      {
+    	  System.out.printf("%d\t",a[i]);
+      }
+	}
+//delete value
+for(i=0;i<n;i++)
+         {
+        	 if(a[i]==pos)
+        	 {
+        		 found=1;
+        		 position=i;
+        		 break;
+        	 }
+         }
+         if(found==1)
+         {
+        	 for(i=position;i<n-1;i++)
+        	 {
+        		 a[i]=a[i+1];
+        	 }
+        	 
+         }
+         else
+         {
+        	 System.out.println("Number is not found");
+         }
+         System.out.println("array after deletion of the  element");
+         for(i=0;i<n-1;i++)
+         {
+        	 System.out.println(a[i]);
+         }
+		
+		
+//remove duplicate number
+
+	for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]==a[j])
+				{
+					for( k=j;k<n;k++)
+					{
+						a[k]=a[k+1];
+					}
+					n--;
+					j--;
+				}
+			}
+		}
+		
+		System.out.println("\nDisplay the remove duplicate number");
+		for(i=0;i<n;i++)
+		{
+			System.out.printf("%d\t",a[i]);
+		}
+	}
+	}
+
+}
+
+//Dupllicate word in String 
+HashSet <String> h= new HashSet<String>();
+		  for(String s:strArray)
+		  {
+			  if(!h.add(s))
+			  {
+				  System.out.println("duplicate Element: "+s);
+			  }
+		  }
+
+OR
+for (int i = 0; i < strArray.length-1; i++)
+        {
+            for (int j = i+1; j < strArray.length; j++)
+            {
+                if( (strArray[i].equals(strArray[j])) && (i != j) )
+                {
+                    System.out.println("Duplicate Element is : "+strArray[j]);
+                }
+            }
+        }
+
+
+//missing number in array
+
+
+      total=(n+1)*(n+2)/2;
+      for(i=0;i<n;i++)
+      {
+    	  sum=sum+a[i];
+      }
+      System.out.printf( "Missing number is %d",total-sum);
+
+//Palimdrome Number
+char[] c=a.toCharArray();
+		
+		String Reverse="";
+		for(int i=c.length-1;i>=0;i--)
+		{
+			Reverse=Reverse+ c[i];
+		}
+		System.out.println(" String:"+a);
+		System.out.println("Reverse String:"+Reverse);
+		if(a.equals("Reverse"))
+		{
+			System.out.println("This is not  palimdrome number");
+		}
+		else
+		{
+			System.out.println("This is  palimdrome number");
+		}
+
+//Find Any Smallest number
+for(i=0;i<n;i++)
+			{ 
+				for(j=i+1;j<n;j++)
+				{
+					if(a[i]>a[j])
+					{
+					   int tmp=a[i];
+					   a[i]=a[j];
+					   a[j]=tmp;
+					
+					}
+					
+				
+				}
+				
+			}
+     
+			  System.out.println(" second Smallest: "+a[3]);
+//Intersection 
+HashSet<String> set=new HashSet<String>();
+         for(int i=0;i<inputArray1.length;i++)
+         {
+        	 for(int j=0;j<inputArray2.length;j++)
+        	 {
+        		 if(inputArray1[i].equals(inputArray2[j]))
+        		 {
+        			 set.add(inputArray1[i]);
+        		 }
+        	 }
+         }
